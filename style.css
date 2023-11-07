@@ -1,0 +1,25 @@
+.inactive{
+    position: absolute;
+    visibility: hidden;
+}
+.active{
+    position: absolute;
+    display: block;
+
+}
+.addbg{
+    background-color: rgba(219, 226, 239, 0.5);
+    transition: all;
+}
+.butst1:hover{
+    background-color: rgba(219, 226, 239, 0.5);
+}
+.butst2:hover{
+    background-color: rgba(219, 226, 239, 0.5);
+}
+.marmaina{
+    margin-top: 100px;
+}
+.marmainb{
+    margin-top: 270px;
+}

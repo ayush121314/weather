@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="icon" href="./Images/pngtree-sun-orange-three-dimensional-illustration-png-image_6694186.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div  style=" background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);"
+    class="wrapper w-screen relative h-screen pt-9 overflow-y-scroll flex flex-col items-center bg-opacity-70 text-white ">
+      <h1 class="text-4xl">WEATHER APP</h1>
+      <div class="flex md:flex-row  lg:flex-row lg:w-[650px] md:w-[430px]   sm:w-[300px] text-xl justify-between mt-8">
+        <div class="">
+          <button class="p-2 butst1  rounded-lg">Your Weather </button>
+        </div>
+        <div class="">
+          <button class="p-2 butst2 rounded-lg">Search Weather </button>
+        </div>
+      </div>
+      <!-- grant location -->
+      <div class="flex flex-col inactive mt-[180px] grloc items-center ">
+        <img src="./Images/location.png" class="w-[100px]  h-[100px]">
+        <h1 class="text-2xl mt-5">Grant location Access</h1>
+        <h1 class="text-md mt-3">Allow Access To Get Weather Information</h1>
+        <button style=" background-color: rgba(219, 226, 239, 0.5)"
+         class=" mt-6 p-3 text-lg grbut  px-5 rounded-lg">Grant Access</button>
+      </div>
+      <!-- main  -->
+     <div class="flex-col flex items-center gap-3   text-white text-3xl inactive maloc1">
+      <div class="flex gap-4">
+      <p class="cityname text-center"></p>
+      <img class="countname w-10 h-10" ></img></div>
+      <p class="type"></p>
+      <img class="weathericon w-[70px] h-[70px] ">
+      <p class="temp text-[45px]"></p>
+      <div class="flex items-center  flex-wrap justify-center gap-3">
+        <div style="background-color: rgba(219, 226, 239, 0.5)"
+        class="mt-5 w-[220px] p-4 px-[50px] rounded-lg flex flex-col items-center">
+        <img src="./Images/wind.png" class="w-[55px] h-[55px]">
+        <h1 class="mt-2 text-xl" >Windspeed</h1>
+        <p class="datawin"></p>
+      </div>
+      <div style="background-color: rgba(219, 226, 239, 0.5)"
+      class="mt-5 p-4  w-[220px] px-[50px] rounded-lg flex flex-col items-center">
+      <img src="./Images/humidity.png" class="w-[55px] h-[55px]">
+      <h1 class="mt-2 text-xl"  >humidity</h1>
+      <p class="datahum"></p>
+    </div>
+    <div style="background-color: rgba(219, 226, 239, 0.5)"
+    class="mt-5 p-4 px-[50px] w-[220px] rounded-lg flex flex-col items-center">
+    <img src="./Images/cloud.png" class="w-[55px] h-[55px]">
+    <h1 class="mt-2 text-xl">cloud</h1>
+    <p class="dataclo"></p>
+  </div>
+      </div>
+    </div>
+     <!-- search -->
+     <div class=" mt-[200px] inactive seloc ">
+      <form class="searform">
+      <input type="text" style="background-color: rgba(219, 226, 239, 0.5)" placeholder="Search for city"
+      class="lg:w-[480px] md:w-[300px] sm:w-[180px] seartext px-4 py-2 rounded-lg text-white placeholder:text-white">
+      <button  style="background-color: rgba(180, 196, 225, 0.5)" type="submit"
+      class="ml-3 rounded-full w-[45px] h-[45px] "><i class="fas fa-search" style="color: #ffffff;"></i> </button>
+    </form>
+    </div>
+      <!-- loading -->
+     <div class="errorcont mt-[300px] flex items-center flex-col inactive subContainer">
+      <img src="./Images/not-found.png" class="w-[150px] h-[150px] dataerror" />
+      <p class="errtext text-xl mb-3">Location not found</p>
+      <button style="background-color: rgba(219, 226, 239, 0.5)"
+      class="errbut px-3 py-2 rounded-md ">Retry now</button>
+    </div>
+    <!-- </div> -->
+    <div class=" flex flex-col mt-[200px] loadwin inactive absolute items-center">
+      <img src="./Images/loading.gif" class="w-[180px] h-[180px]">
+      <h1 class="text-2xl">LOADING</h1>
+     </div>
+    </div>
+   <script src="https://kit.fontawesome.com/8047145711.js" crossorigin="anonymous"></script>
+   <script src="./index.js" type="module"></script>
+  </body>
+</html>
